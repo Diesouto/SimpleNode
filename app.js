@@ -74,6 +74,7 @@ app.post('/borrar',  (req, res) =>{
     var index = users.findIndex(a=> a.nif === _nif);
     if (index > -1) {
         users.splice(index, 1);
+        fs.writeFileSync('src/clientes.json',JSON.stringify(users),'utf-8');
     }
     
     res.redirect('/listado'); 
