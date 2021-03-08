@@ -1,0 +1,281 @@
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: darkslategrey;
+}
+
+.contenedor {
+	margin: auto;
+	width: 90%;
+	max-width: 1000px;
+
+	display: flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 0 1em 0 1em;
+	text-align: center;
+}
+
+th {
+	font-weight: 100;
+	font-size: 18px;
+	color: #537dca;
+}
+
+header {
+	width: 100%;
+	padding: 50px 0;
+
+	display: flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	align-items:center;
+
+	flex:1 100%;
+}
+
+header .menu a {
+	color: #fff;
+	text-decoration: none;
+	margin-right:40px;
+	font-size: 18px;
+}
+
+header .menu a:hover {text-decoration: underline;}
+
+.main {
+	background: #fff;
+	padding: 50px 0;
+	width: 70%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+
+}
+
+.main h2 {
+	display: block;
+	width: 100%;
+
+	margin-bottom: 20px;
+	font-weight: 100;
+	font-size: 24px;
+	color: #537dca;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+
+.formulario {
+	background: #fff;
+	width: 500px;
+	margin: 20px auto;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.formulario input, select {
+	display: block;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea,
+.formulario select {
+	width: 100%;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 3px;
+	border:1px solid #226fc1;
+
+	font-size: 16px;
+	font-family: Arial;
+
+	
+}
+
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus,
+.formulario textarea:focus {
+	border:2px solid #4fb560;
+}
+
+.formulario input[type="submit"] {
+	width: 200px;
+	margin: 0 auto;
+	padding: 10px;
+	border:1px solid #4fb560;
+	color: #4fb560;
+	background: none;
+	cursor: pointer;
+	border-radius: 3px;
+	font-size: 16px;
+}
+
+.formulario input[type="submit"]:hover {
+	background: #4fb560;
+	color: #fff;
+}
+
+
+aside {
+	width: 40%;
+	background: #8991a0;
+
+	display: flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+	/*Establece la longuitud inicial del elemento flexible*/
+	flex-basis:20%;
+	
+	
+}
+.caja {
+	width: 100px;
+	height: 100px;
+
+	text-align: center;
+	background: #d4f756;
+	margin: 20px;
+	padding: 20px;
+	font-size: 40px;
+	color: #fff;
+/*	flex-grow:1;
+	flex-shrink:1;*/
+
+	flex:1 1 auto;
+}
+footer {
+	margin-top: 20px;
+	background: rgba(255,255,255,.2);
+	padding: 20px;
+	margin-bottom: 20px;
+	width: 100%;
+	color: #fff;
+
+	display: flex;
+	flex-direction:row;
+	flex-wrap:no-wrap;
+	justify-content:space-between;
+	flex:1 100%;
+}
+
+footer .redes-sociales a {
+	color: #fff;
+	text-decoration: underline;
+	margin-left: 20px;
+}
+
+footer .redes-sociales a:hover {
+	text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+	
+	header nav{
+		line-height:31px;
+	}
+	header ul{	
+	 	flex-flow: column wrap;	
+	 	align-items: center; 
+	 	justify-content: center;  	
+	}
+	header ul li{
+		margin-bottom:2px;
+	}
+	
+	
+	header{
+		order:0;
+	}
+	
+	#cuerpo{
+		flex: 1 100%;
+		order:1;		
+	}
+	
+	aside{
+		flex: 1 100%;
+		order:2;		
+	}
+	
+	footer{
+		order:3;
+	}
+
+}
+
+@media screen and (max-width: 800px) {
+	.main {
+		width: 100%;
+	}
+
+	aside {
+		width: 100%;
+	}
+
+	footer {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	header {
+		flex-direction:column;
+		padding-bottom: 20px; 
+	}
+
+	header .menu {
+		width: 100%;
+		background: rgba(255,255,255,.2);
+		text-align: center;
+		padding: 20px;
+	}
+
+	header .menu a {
+		margin:0 20px; 
+	}
+	.formulario  {
+		width: 70%;
+		
+		
+
+	
+}
+
+	footer {
+		flex-direction:column;
+		text-align: center;
+	}
+
+	footer .autor {
+		order:2;
+	}
+
+	footer .redes-sociales {
+		order:1;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	aside {
+		display: none;
+	}
+}

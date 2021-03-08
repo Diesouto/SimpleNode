@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Modelo Vista Controlador </title>
+	<link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+	<div class="contenedor">
+		<header>
+			<nav class="menu">
+				<a href="/">Insertar</a>
+				<a href="listado">Listado</a>
+				<a href="borrar">Borrar</a>
+			</nav>
+		</header>
+
+		<section class="main">
+			<h2>BORRAR CLIENTE</h2>
+			<form class="formulario" action="/borrar" method="POST">
+				<input id="nif" name="nif" type="text" placeholder="NIF" placeholder="NIF">
+				<input type="submit" value="Enviar">
+			</form>
+				
+		</section>
+		
+		<footer>
+			<div class="autor">
+				<p>Creado por Diego Souto</p>
+			</div>
+			<div class="redes-sociales">
+				<p> Facebook</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
